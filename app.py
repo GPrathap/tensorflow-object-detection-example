@@ -105,9 +105,7 @@ def is_image():
 
 
 class PhotoForm(Form):
-  input_photo = FileField(
-      'File extension should be: %s (case-insensitive)' % ', '.join(extensions),
-      validators=[is_image()])
+  input_photo = FileField("", validators=[is_image()])
 
 
 class ObjectDetector(object):
